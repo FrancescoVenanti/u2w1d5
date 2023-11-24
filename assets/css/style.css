@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Spectral:wght@400;700&display=swap");
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  overflow: auto;
+}
+/* Classe box per centrare il contenuto */
+.box {
+  margin-inline: auto;
+  width: 1100px;
+}
+/* header  */
+header {
+  background-color: #ffc017;
+  padding: 1rem;
+  font-size: 12px;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid black;
+  z-index: 2;
+  transition: 1s;
+}
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav {
+  margin-inline-start: auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  gap: 20px;
+}
+header li {
+  list-style-type: none;
+  cursor: pointer;
+}
+#getStarted {
+  padding: 1em;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+/* main content */
+main {
+  background-color: #ffc017;
+  position: relative;
+  border-block-end: 1px solid black;
+  margin-block-end: 2rem;
+  min-height: 462px; /* altrimenti sballa l'immagine */
+}
+.mainContent {
+  padding-block: 6rem;
+}
+h1 {
+  font-size: 96px;
+  font-family: "Spectral", serif;
+}
+.mainContent p {
+  font-size: 22px;
+  margin-block: 1.8em;
+}
+button#startReading {
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  padding: 0.5em 2em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.m {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* trending */
+.trending > span {
+  display: flex;
+  align-items: center;
+  margin-block-end: 1em;
+  cursor: pointer;
+}
+.trends {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-end: 3em;
+}
+.trend {
+  width: 30%;
+  display: flex;
+  gap: 10px;
+  font-size: 32px;
+  color: lightgrey;
+  flex-grow: 1;
+}
+.trend > p {
+  font-weight: 700;
+}
+.trendInnerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.authorInfo > img {
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.trendInnerContent p.articleTitle,
+.asideArticles p.articleTitle {
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.trendInnerContent p.articleStats,
+.asideArticles p.articleStats {
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
+}
+.authorInfo p.author {
+  color: black;
+  font-size: 12px;
+  cursor: pointer;
+}
+.trendingBig {
+  border-bottom: 1px solid lightgrey;
+}
+
+/* Aside content */
+aside {
+  padding-block: 4em;
+}
+.article {
+  display: flex;
+}
+.article > img {
+  min-width: 20%;
+  max-width: 30%;
+  object-fit: cover;
+  margin-inline-start: 20px;
+  cursor: pointer;
+}
+.articleText {
+  width: 70%;
+  cursor: pointer;
+}
+.asideArticles {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.author {
+  font-weight: 700;
+}
+.author span {
+  font-weight: 400;
+}
+.asideArticles p.articleTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+.asideArticles p.articleSubtitle {
+  font-size: 14px;
+}
+.article .articleTitle {
+  margin-block: 10px;
+}
+.article .articleSubtitle {
+  margin-block-end: 10px;
+}
+.articleStats span {
+  background-color: rgb(228, 226, 226);
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+}
+.articleStats {
+  display: flex;
+  align-items: center;
+}
+.articleStats .bookmark {
+  margin-left: auto;
+  opacity: 0.6;
+}
+
+/* discorver content */
+.asideContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: none;
+}
+.discover {
+  max-width: 35%;
+  padding-block: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: sticky;
+  top: 100px;
+}
+.discover h4 {
+  font-size: 14px;
+}
+.discover .discoverLinks,
+.discoverFooter {
+  padding-block-start: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  cursor: pointer;
+}
+.discover .discoverLinks span {
+  font-size: 14px;
+  background-color: lightgrey;
+  border-radius: 20px;
+  padding: 10px;
+}
+.discover .discoverLinks a {
+  margin-block-start: 15px;
+  color: green;
+  text-decoration: none;
+  font-size: 14px;
+}
+.discover .discoverLinks {
+  padding-block-end: 2em;
+  border-block-end: 1px solid lightgrey;
+}
+.discoverFooter {
+  color: grey;
+  font-size: 12px;
+}
+
+/* classe per le animazioni */
+.whiteHeader {
+  background-color: white;
+}
+#getStarted.greenButton {
+  background-color: green;
+}
+
+/* media quesries */
+@media screen and (max-width: 1201px) {
+  .box {
+    width: 1000px;
+  }
+  h1 {
+    font-size: 80px;
+  }
+  .mainContent p {
+    font-size: 20px;
+  }
+  button#startReading {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .m {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .box {
+    width: 650px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  h1 {
+    font-size: 64px;
+  }
+  .mainContent p {
+    font-size: 18px;
+  }
+  button#startReading {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .m {
+    margin: 0;
+    position: absolute;
+    right: -50px;
+    top: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .m {
+    margin: 0;
+    position: absolute;
+    right: -120px;
+    top: 0;
+  }
+}
+@media screen and (max-width: 770px) {
+  nav ul {
+    gap: 10px;
+  }
+  #getStarted {
+    padding: 0.5em;
+    font-size: 12px;
+  }
+  .m {
+    margin: 0;
+    position: absolute;
+    right: -250px;
+    top: 0;
+  }
+  .box {
+    width: 95%;
+  }
+  .trends {
+    row-gap: 30px;
+  }
+  .trend {
+    width: 40%;
+  }
+  .asideContent {
+    flex-direction: column;
+  }
+  .asideArticles {
+    order: 1;
+    width: 90%;
+  }
+  .discover {
+    max-width: 90%;
+    background-color: white;
+    top: 70px;
+  }
+  .discoverLinks span {
+    color: grey;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .m {
+    display: none;
+  }
+  nav ul li:not(:last-child) {
+    display: none;
+  }
+  h1 {
+    font-size: 80px;
+  }
+  .mainContent p {
+    font-size: 22px;
+    margin-block: 3rem;
+  }
+  .trend {
+    width: unset;
+  }
+  .discover {
+    top: 50px;
+  }
+  .discover .discoverLinks span {
+    border: 1px solid grey;
+    background-color: white;
+    border-radius: unset;
+  }
+}
