@@ -16,10 +16,7 @@ window.onscroll = function () {
   scrollChange();
 };
 
-//non funzionera' mai
-//non e'perfetto ma fa qualcosa
-
-const mFader = setInterval(function () {
+const mFader = function () {
   let m = document.querySelectorAll("g");
   m.forEach((el) => {
     let random = Math.round(Math.random() * 200);
@@ -31,5 +28,26 @@ const mFader = setInterval(function () {
       }, 1000);
     }
   });
-}, 500);
-mFader;
+};
+setInterval(mFader, 1000);
+
+//ancora non funziona
+
+/* const scambio2 = [];
+const mFader2 = function () {
+  let m = document.querySelectorAll("svg g");
+
+  for (let i = 0; i < m.length / 2; i++) {
+    const deleteM = setTimeout(function () {
+      scambio2[i] = m[i].innerHTML;
+      m[i].innerHTML = "";
+    }, i * 50);
+  }
+
+  for (let i = 0; i < m.length / 2; i++) {
+    const pushM = setTimeout(function () {
+      m[i].innerHTML = scambio2[i];
+    }, ((i * m.length) / 2) * 1000);
+  }
+};
+mFader2(); */

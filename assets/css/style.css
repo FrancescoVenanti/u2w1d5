@@ -7,7 +7,7 @@ body {
 /* Classe box per centrare il contenuto */
 .box {
   margin-inline: auto;
-  width: 1100px;
+  max-width: 1100px;
 }
 /* header  */
 header {
