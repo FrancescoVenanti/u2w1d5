@@ -32,30 +32,30 @@ window.onscroll = function () {
 //setInterval(mFader, 1000);
 
 const mfader3 = function () {
-  let g = document.querySelectorAll("g:nth-child(3n + 2)[opacity='1']");
+  let g = document.querySelectorAll("g:nth-child(n + 2)[opacity='1']");
 
   let gs = Array.from(g);
   gs.sort(() => Math.random() - 0.5);
 
   let i = 0;
   const removeM2 = setInterval(function () {
-    if (i < gs.length) {
+    if (i < gs.length / 4) {
       gs[i].style.opacity = "0";
       i++;
     } else {
       clearInterval(removeM2);
       i = 0;
       const pushM2 = setInterval(function () {
-        if (i < gs.length) {
+        if (i < gs.length / 4) {
           gs[i].style.opacity = "1";
           i++;
         } else {
           clearInterval(pushM2);
           mfader3();
         }
-      }, 10);
+      }, 50);
     }
-  }, 10);
+  }, 50);
 };
 
 mfader3();
