@@ -16,7 +16,7 @@ window.onscroll = function () {
   scrollChange();
 };
 
-const mFader = function () {
+/* const mFader = function () {
   let m = document.querySelectorAll("g");
   m.forEach((el) => {
     let random = Math.round(Math.random() * 200);
@@ -28,26 +28,31 @@ const mFader = function () {
       }, 1000);
     }
   });
+}; */
+//setInterval(mFader, 1000);
+
+const mfader3 = function () {
+  let gs = document.querySelectorAll("g:nth-child(3n + 2)[opacity='1']");
+
+  let i = 0;
+  const removeM2 = setInterval(function () {
+    if (i < gs.length) {
+      gs[i].style.opacity = "0";
+      i++;
+    } else {
+      clearInterval(removeM2);
+      i = 0;
+      const pushM2 = setInterval(function () {
+        if (i < gs.length) {
+          gs[i].style.opacity = "1";
+          i++;
+        } else {
+          clearInterval(pushM2);
+          mfader3();
+        }
+      }, 10);
+    }
+  }, 10);
 };
-setInterval(mFader, 1000);
 
-//ancora non funziona
-
-/* const scambio2 = [];
-const mFader2 = function () {
-  let m = document.querySelectorAll("svg g");
-
-  for (let i = 0; i < m.length / 2; i++) {
-    const deleteM = setTimeout(function () {
-      scambio2[i] = m[i].innerHTML;
-      m[i].innerHTML = "";
-    }, 500);
-  }
-
-  for (let i = 0; i < m.length / 2; i++) {
-    const pushM = setTimeout(function () {
-      m[i].innerHTML = scambio2[i];
-    }, 1000);
-  }
-};
-mFader2(); */
+mfader3();
