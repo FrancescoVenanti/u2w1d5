@@ -32,7 +32,10 @@ window.onscroll = function () {
 //setInterval(mFader, 1000);
 
 const mfader3 = function () {
-  let gs = document.querySelectorAll("g:nth-child(3n + 2)[opacity='1']");
+  let g = document.querySelectorAll("g:nth-child(3n + 2)[opacity='1']");
+
+  let gs = Array.from(g);
+  gs.sort(() => Math.random() - 0.5);
 
   let i = 0;
   const removeM2 = setInterval(function () {
