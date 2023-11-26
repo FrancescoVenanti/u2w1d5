@@ -41,13 +41,13 @@ const mFader2 = function () {
     const deleteM = setTimeout(function () {
       scambio2[i] = m[i].innerHTML;
       m[i].innerHTML = "";
-    }, i * 50);
+    }, 500);
   }
 
   for (let i = 0; i < m.length / 2; i++) {
     const pushM = setTimeout(function () {
       m[i].innerHTML = scambio2[i];
-    }, ((i * m.length) / 2) * 1000);
+    }, 1000);
   }
 };
 mFader2(); */
